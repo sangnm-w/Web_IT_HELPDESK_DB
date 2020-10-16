@@ -1,0 +1,12 @@
+CREATE TABLE [dbo].[QUESTION]
+(
+[ID] [uniqueidentifier] NOT NULL,
+[NO] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[QUESTION_CONTENT] [nvarchar] (max) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ANSWER_ID] [int] NULL,
+[NOTE] [nvarchar] (max) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DEL] [bit] NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[QUESTION] ADD CONSTRAINT [PK_QUESTION] PRIMARY KEY CLUSTERED  ([ID]) ON [PRIMARY]
+GO
